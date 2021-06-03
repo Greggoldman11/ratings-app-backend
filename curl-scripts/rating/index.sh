@@ -7,5 +7,3 @@ curl "${API}${URL_PATH}" \
   --header "Authorization: Bearer ${TOKEN}"
 
 echo
-
-# TOKEN= sh curl-scripts/rating/index.sh
