@@ -49,12 +49,14 @@ router.patch('/ratings:id', requireToken, removeBlanks, (req, res, next) => {
   delete req.body.rating.owner
 
   Rating.findById(req.params.id)
+
     .then(handle404)
     .then(rating => {
       requireOwnership(req, rating)
       return rating.updateOne(req.body.rating)
     })
-    .then(() => res.sendStatus(204))
+    .then(rating => res.status(200).json({ rating }))
+    // .then(() => res.sendStatus(204))
     .catch(next)
 })
 
