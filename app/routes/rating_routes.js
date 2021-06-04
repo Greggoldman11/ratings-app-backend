@@ -45,7 +45,7 @@ router.get('/ratings', requireToken, (req, res, next) => {
     .catch(next)
 })
 
-router.patch('/ratings:id', requireToken, removeBlanks, (req, res, next) => {
+router.patch('/ratings/:id', requireToken, removeBlanks, (req, res, next) => {
   delete req.body.rating.owner
 
   Rating.findById(req.params.id)
@@ -60,7 +60,7 @@ router.patch('/ratings:id', requireToken, removeBlanks, (req, res, next) => {
     .catch(next)
 })
 
-router.delete('/ratings:id', requireToken, (req, res, next) => {
+router.delete('/ratings/:id', requireToken, (req, res, next) => {
   Rating.findById(req.params.id)
     .then(handle404)
     .then(rating => {
