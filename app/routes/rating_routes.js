@@ -55,8 +55,8 @@ router.patch('/ratings:id', requireToken, removeBlanks, (req, res, next) => {
       requireOwnership(req, rating)
       return rating.updateOne(req.body.rating)
     })
-    .then(rating => res.status(200).json({ rating }))
-    // .then(() => res.sendStatus(204))
+    .then(() => Rating.findById(req.params.id))
+    .then(rating => res.status(201).json({ rating }))
     .catch(next)
 })
 
