@@ -10,10 +10,8 @@ const Rating = require('./../models/rating')
 // require the error handler
 const {
   requireOwnership,
-  handle404,
-  BadParamsError,
-  BadCredentialsError
-}  = require('./../../lib/custom_errors')
+  handle404
+} = require('./../../lib/custom_errors')
 
 // require middleware
 const removeBlanks = require('./../../lib/remove_blank_fields')
