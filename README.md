@@ -22,4 +22,4 @@ authentication and common middlewares.
 - I would like to eventually have different inputs for different categories of ratings
 
 # Images
-![Wireframe](https://media.git.generalassemb.ly/user/35839/files/068ff500-c779-11eb-9273-8cc6ceab4e30)
+![ERD](https://media.git.generalassemb.ly/user/35839/files/8c13a500-c779-11eb-8d0a-1e9060617611)
