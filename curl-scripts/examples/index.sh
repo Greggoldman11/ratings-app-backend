@@ -1,7 +1,7 @@
 #!/bin/sh
 
-API="http://localhost:4741"
-URL_PATH="/examples"
+API="http://taco-randomizer.herokuapp.com/"
+URL_PATH="/random/"
 
 curl "${API}${URL_PATH}" \
   --include \
