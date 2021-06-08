@@ -38,7 +38,7 @@ router.post('/ratings', requireToken, (req, res, next) => {
 })
 router.get('/ratings', requireToken, (req, res, next) => {
   // locate all of my ratings
-  Rating.find()
+  Rating.find({ owner: req.user._id })
     .then(ratings => res.status(200).json({ ratings }))
     .catch(next)
 })
